@@ -34,7 +34,7 @@ sudo apt install mosquitto mosquitto-clients -y
 * mosquitto : le broker MQTT
 * mosquitto-clients`: outils `mosquitto_pub` et `mosquitto_sub`
 
-## 3. Démarrer et activer le service
+## 3. Démarrer et activer le service 
 
 Demarre mosquitto
 sudo systemctl start mosquitto 
@@ -44,13 +44,15 @@ sudo systemctl enable mosquitto
 
 Verifie sont statut
 sudo systemctl status mosquitto
-```
+
+
 
 ## 4. Configurer pour accès local et distant
 
 
+
 sudo nano /etc/mosquitto/mosquitto.conf
-```
+
 
 Ajouter ou modifier :
 
@@ -63,6 +65,8 @@ Puis redémarrer :
 
 ```bash
 sudo systemctl restart mosquitto
+
+
 ## 5. Tester en local
 
 * Subscriber :
@@ -74,7 +78,7 @@ mosquitto_sub -h localhost -t "test/topic"
 * Publisher :
 
 mosquitto_pub -h localhost -t "test/topic" -m "Bonjour Pi!"
-```
+
 
 ## 6. Tester depuis un autre PC sur le même réseau
 
@@ -97,6 +101,7 @@ mosquitto_pub -h <IP_du_Pi> -t "test/topic" -m "Hello depuis le PC"
 * `allow_anonymous true` : pratique pour tester mais pas sécurisé
 * Pour sécuriser le broker : utiliser `mosquitto_passwd` et configurer `allow_anonymous false`
 * Sur Raspberry Pi, possibilité de connecter des capteurs (DHT22, BMP280) et publier leurs données via MQTT
+
 
 ##.8 installer mqttX sur rasberry pi ou linux amd
 
