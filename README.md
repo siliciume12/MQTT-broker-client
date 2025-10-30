@@ -101,3 +101,4 @@ mosquitto_pub -h <IP_du_Pi> -t "test/topic" -m "Hello depuis le PC"
 ##.8 installer mqttX sur rasberry pi ou linux amd
 
 Suivre le liens ci-dessous et télécharger la version correspondante à votre appareil (exemple d’IHM de mqtt).
+https://mqttx.app/downloads
